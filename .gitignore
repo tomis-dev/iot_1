@@ -72,3 +72,5 @@ ScaffoldingReadMe.txt
 # Other
 *.suo
 *.sln.docstates
+.DS_Store
+/node_modules
