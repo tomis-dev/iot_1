@@ -75,3 +75,5 @@ ScaffoldingReadMe.txt
 .DS_Store
 /node_modules
 mydatabase.db
+package-lock.json
+package.json
