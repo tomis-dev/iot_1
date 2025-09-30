@@ -74,3 +74,4 @@ ScaffoldingReadMe.txt
 *.sln.docstates
 .DS_Store
 /node_modules
+mydatabase.db
