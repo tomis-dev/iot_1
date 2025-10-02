@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <title>IoT Websocket</title>
+  </head>
+  <body>
+    <h1>Websocket-harjoitus</h1>
+    <input id="msg" />
+    <button onClick="sendMessage()">Send</button>
+    <div id="log"></div>
+  </body>
+  <script>
+    const socket = new WebSocket("ws://localhost:8080");
+
+    socket.onopen = (event) => {
+      console.log("Yhteys avattu");
+      document.getElementById("log").innerHTML += "<p>Yhteys avattu</p>";
+    };
+
+    socket.onmessage = (event) => {
+      console.log("Viesti saatu: " + event.data);
+      document.getElementById(
+        "log"
+      ).innerHTML += `<p>Viesti saatu: ${event.data}</p>`;
+    };
+
+    function sendMessage() {
+      const msg = document.getElementById("msg").value;
+      socket.send(msg);
+    }
+  </script>
+</html>
