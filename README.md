@@ -54,4 +54,6 @@ A complete IoT data pipeline:
 4. **Configuration**:  
    API keys and webhook URLs are managed in `config.py`.
 
----
+---<img width="587" height="785" alt="Screenshot 2025-10-06 at 10 57 09" src="https://github.com/user-attachments/assets/02705874-2339-48a7-bcaa-c9acc352bd57" />
+<img width="1175" height="736" alt="Screenshot 2025-10-06 at 11 05 39" src="https://github.com/user-attachments/assets/67ed4ede-7fb3-4c32-80fb-463680042697" />
+
