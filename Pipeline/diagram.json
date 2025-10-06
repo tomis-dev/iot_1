@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "author": "Matias Nurminen",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "board-pi-pico-w",
+      "id": "pico",
+      "top": 6.35,
+      "left": -102.05,
+      "attrs": { "env": "micropython-20241129-v1.24.1" }
+    },
+    {
+      "type": "wokwi-dht22",
+      "id": "dht1",
+      "top": -162.9,
+      "left": 33,
+      "attrs": { "temperature": "7.5", "humidity": "38" }
+    },
+    {
+      "type": "wokwi-lcd1602",
+      "id": "lcd1",
+      "top": -166.4,
+      "left": -282.4,
+      "attrs": { "pins": "i2c" }
+    }
+  ],
+  "connections": [
+    [ "pico:3V3", "dht1:VCC", "red", [ "h0" ] ],
+    [ "pico:GND.7", "dht1:GND", "black", [ "h0" ] ],
+    [ "dht1:SDA", "pico:GP15", "green", [ "v288", "h-182.3", "v-9.6" ] ],
+    [ "lcd1:SDA", "pico:GP0", "green", [ "h-19.2", "v0.2" ] ],
+    [ "lcd1:SCL", "pico:GP1", "green", [ "h-38.4", "v0.3" ] ],
+    [ "lcd1:VCC", "pico:3V3", "red", [ "h-48", "v0.1" ] ],
+    [ "lcd1:GND", "pico:GND.1", "black", [ "h-67.2", "v201.6" ] ]
+  ],
+  "dependencies": {}
+}
